@@ -1,0 +1,102 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Style pour la liste des contacts */
+#contactList li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+#contactList li:hover {
+    background-color: #e0e0e0;
+}
+
+#contactList li a {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #8e44ad;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 50px; /* Centrer le texte verticalement */
+    margin-right: 10px;
+    text-align: center;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Style pour la page des détails du contact */
+#contactInfo {
+    text-align: center;
+}
+
+#contactInfo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Style pour le bouton de suppression */
+#deleteContact {
+    margin-top: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#deleteContact:hover {
+    background-color: #c0392b;
+}
+
+/* Styles pour les messages d'erreur */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styles pour la liste déroulante */
+.ui-field-contain {
+    margin-bottom: 10px;
+}
+
+#countryCode {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: #333;
+}

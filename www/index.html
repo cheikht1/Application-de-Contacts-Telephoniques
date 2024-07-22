@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacts</title>
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!-- Page d'accueil -->
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>Contact List</h1>
+            <a href="#addContact" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Add</a>
+        </div>
+        <div data-role="content">
+            <input id="searchInput" data-type="search" placeholder="Search contacts...">
+            <ul id="contactList" data-role="listview" data-inset="true">
+                <!-- Les contacts seront insérés ici dynamiquement -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page des détails du contact -->
+    <div data-role="page" id="contactDetails">
+        <div data-role="header">
+            <a href="#home" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Back</a>
+            <h1>Contact Details</h1>
+        </div>
+        <div data-role="content">
+            <div id="contactInfo">
+                <!-- Les détails du contact seront insérés ici dynamiquement -->
+            </div>
+            <button id="deleteContact" data-role="button" data-icon="delete">Delete Contact</button>
+        </div>
+    </div>
+
+    <!-- Page d'ajout d'un contact -->
+<div data-role="page" id="addContact">
+    <div data-role="header">
+        <a href="#home" data-role="button" data-icon="back" data-iconpos="notext" class="ui-btn-left">Back</a>
+        <h1>Add Contact</h1>
+    </div>
+    <div data-role="content">
+        <form id="contactForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <div id="firstNameError" class="error-message"></div>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <div id="lastNameError" class="error-message"></div>
+            
+            <label for="phoneNumber">Phone Number:</label>
+            <div class="ui-field-contain">
+                <label for="countryCode">Country Code:</label>
+                <select id="countryCode" name="countryCode">
+                    <option value="+1">+1 (USA)</option>
+                    <option value="+33">+33 (France)</option>
+                    <option value="+44">+44 (UK)</option>
+                    <option value="+221">+221 (Senegal)</option>
+                    <!-- Ajoutez plus d'options selon vos besoins -->
+                </select>
+            </div>
+            <input type="text" id="phoneNumber" name="phoneNumber" required placeholder="Enter phone number">
+            <div id="phoneNumberError" class="error-message"></div>
+            
+            <input type="submit" value="Add Contact">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
